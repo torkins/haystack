@@ -19,6 +19,15 @@ public class Reps {
 	public Reps() {
 	}
 
+	public Reps(RepsType type) {
+		super();
+		if (type != RepsType.AMRAP) {
+			throw new RuntimeException("Have to construct a RepsType other than AMRAP with another parameter");
+		}
+
+		this.type = type;
+	}
+
 	public Reps(RepsType type, int countOrRPE) {
 		super();
 		this.type = type;

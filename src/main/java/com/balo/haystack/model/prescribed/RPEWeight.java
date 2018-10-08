@@ -8,11 +8,13 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 @Embeddable
-public abstract class RPEWeight extends Weight {
+public class RPEWeight {
 	@Getter @Setter
 	private String rpe;
 
 	public RPEWeight(String rpe) {
 		this.rpe = rpe;
 	}
+
+	public RPEWeight() {}
 }
